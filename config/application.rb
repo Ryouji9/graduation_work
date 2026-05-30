@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module App
   class Application < Rails::Application
+    config.hosts << "graduation-work-a1ro.onrender.com"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
