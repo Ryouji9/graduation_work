@@ -11,3 +11,14 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 25ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 7908)
 
 
+Started GET "/" for 172.18.0.1 at 2026-05-30 06:32:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 251.9ms | Allocations: 100880)
+Completed 200 OK in 289ms (Views: 262.6ms | ActiveRecord: 0.0ms | Allocations: 109257)
+
+
