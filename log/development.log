@@ -514,3 +514,35 @@ Processing by SelectionsController#new as TURBO_STREAM
 Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 10041)
 
 
+Started GET "/selections/new" for 172.18.0.1 at 2026-05-31 09:10:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SelectionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering selections/new.html.erb within layouts/application
+  Rendered selections/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 9097)
+  Rendered layout layouts/application.html.erb (Duration: 282.3ms | Allocations: 53980)
+Completed 200 OK in 356ms (Views: 289.8ms | ActiveRecord: 8.6ms | Allocations: 80460)
+
+
+Started POST "/selections" for 172.18.0.1 at 2026-05-31 09:10:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SelectionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "era"=>"50代", "worries"=>["昇進・キャリアアップが止まった"], "feeling"=>"誰かに背中を押してほしい", "commit"=>"偉人を探す"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/selections/new
+Completed 302 Found in 34ms (ActiveRecord: 4.4ms | Allocations: 1637)
+
+
+Started GET "/selections/new" for 172.18.0.1 at 2026-05-31 09:10:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SelectionsController#new as TURBO_STREAM
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering selections/new.html.erb within layouts/application
+  Rendered selections/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 7706)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 8920)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 10558)
+
+
