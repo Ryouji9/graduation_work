@@ -1,0 +1,40 @@
+<h1>あなたの悩みを教えてください</h1>
+
+<%= form_with url: selections_path, method: :post do |f| %>
+
+  <!-- STEP1: 時代（年齢）の選択 -->
+  <div class="step">
+    <h2>STEP1: あなたの年代を選んでください</h2>
+    <% ['40代', '50代', '60代', '70代以上'].each do |era| %>
+      <label>
+        <%= f.radio_button :era, era %>
+        <%= era %>
+      </label>
+    <% end %>
+  </div>
+
+  <!-- STEP2: 今の悩みの選択（複数選択可） -->
+  <div class="step">
+    <h2>STEP2: 今の悩みを選んでください（複数選択可）</h2>
+    <% ['仕事・キャリア', '人間関係', '健康', '家族', '将来・老後', 'お金', '生きがい'].each do |worry| %>
+      <label>
+        <%= f.check_box :worries, { multiple: true }, worry, nil %>
+        <%= worry %>
+      </label>
+    <% end %>
+  </div>
+
+  <!-- STEP3: 今の気持ちの選択 -->
+  <div class="step">
+    <h2>STEP3: 今の気持ちを選んでください</h2>
+    <% ['前向きに頑張りたい', 'とにかく現状を変えたい', '誰かに背中を押してほしい', 'ただ話を聞いてほしい'].each do |feeling| %>
+      <label>
+        <%= f.radio_button :feeling, feeling %>
+        <%= feeling %>
+      </label>
+    <% end %>
+  </div>
+
+  <%= f.submit "偉人を探す" %>
+
+<% end %>

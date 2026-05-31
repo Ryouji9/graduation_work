@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'selections/new'
   devise_for :users
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
   root "home#index"
   get 'terms', to: 'static_pages#terms'
   get 'privacy', to: 'static_pages#privacy'
+  get 'selections/new', to: 'selections#new', as: 'new_selection'
+  post 'selections', to: 'selections#create', as: 'selections'
 end

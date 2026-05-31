@@ -450,3 +450,67 @@ Processing by StaticPagesController#privacy as HTML
 Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 2.5ms | Allocations: 2297)
 
 
+Started GET "/selections/new" for 172.18.0.1 at 2026-05-31 08:20:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (13.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SelectionsController#new as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering selections/new.html.erb within layouts/application
+  Rendered selections/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 8359)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 45256)
+Completed 200 OK in 111ms (Views: 71.3ms | ActiveRecord: 6.4ms | Allocations: 63545)
+
+
+Started POST "/selections" for 172.18.0.1 at 2026-05-31 08:20:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SelectionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "era"=>"50代", "worries"=>["仕事・キャリア"], "feeling"=>"前向きに頑張りたい", "commit"=>"偉人を探す"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/selections/new
+Completed 302 Found in 25ms (ActiveRecord: 3.4ms | Allocations: 1637)
+
+
+Started GET "/selections/new" for 172.18.0.1 at 2026-05-31 08:20:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SelectionsController#new as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering selections/new.html.erb within layouts/application
+  Rendered selections/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 7237)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 8451)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 10080)
+
+
+Started GET "/terms" for 172.18.0.1 at 2026-05-31 08:21:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StaticPagesController#terms as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/terms.html.erb within layouts/application
+  Rendered static_pages/terms.html.erb within layouts/application (Duration: 1.7ms | Allocations: 110)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:16
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2189)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 2705)
+
+
+Started POST "/selections" for 172.18.0.1 at 2026-05-31 08:21:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SelectionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "era"=>"50代", "worries"=>["仕事・キャリア"], "feeling"=>"前向きに頑張りたい", "commit"=>"偉人を探す"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/selections/new
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 1504)
+
+
+Started GET "/selections/new" for 172.18.0.1 at 2026-05-31 08:21:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SelectionsController#new as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering selections/new.html.erb within layouts/application
+  Rendered selections/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 7236)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 8450)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 10041)
+
+
