@@ -21,5 +21,9 @@
       <%= link_to "新規登録", new_user_registration_path %>
     <% end %>
     <%= yield %>
+    <footer>
+      <%= link_to "利用規約", terms_path %>
+      <%= link_to "プライバシーポリシー", privacy_path %>
+    </footer>
   </body>
 </html>
