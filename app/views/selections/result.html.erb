@@ -1,7 +1,15 @@
-<h1>あなたにぴったりの偉人</h1>
+<div class="episode-container">
+  <h1>あなたにぴったりの偉人</h1>
 
-<div class="episode">
-  <%= simple_format(@episode) %>
+  <div class="episode-content">
+    <%= markdown(@episode) %>
+  </div>
+
+  <p class="disclaimer">
+    ※エピソードはAIによる生成のため、詳細は各自でご確認ください。
+  </p>
+
+  <div class="actions">
+    <%= link_to "別の偉人を探す", new_selection_path, class: "btn" %>
+  </div>
 </div>
-
-<%= link_to "もう一度探す", new_selection_path %>
