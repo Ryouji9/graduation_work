@@ -41,5 +41,16 @@
 
     <%= f.submit "偉人を探す", class: "btn-primary" %>
 
+    <div id="loading" style="display:none; text-align:center; padding:40px;">
+      <p>偉人を探しています...<br>少々お待ちください</p>
+    </div>
+
+    <script>
+      document.querySelector('form').addEventListener('submit', function() {
+        document.getElementById('loading').style.display = 'block';
+        document.querySelector('.btn-primary').style.display = 'none';
+      });
+    </script>
+
   <% end %>
 </div>
