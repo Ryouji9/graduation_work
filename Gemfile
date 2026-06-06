@@ -48,12 +48,14 @@ gem "bootsnap", require: false
 # 認証
 gem "devise"
 
-# Claude API連携
+# Anthropic API連携
+gem "faraday"
 gem "anthropic"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem "dotenv-rails"
 end
 
 group :development do

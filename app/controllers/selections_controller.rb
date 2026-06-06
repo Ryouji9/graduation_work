@@ -6,8 +6,12 @@ class SelectionsController < ApplicationController
 
   def create
     @era = params[:era]
-    @worries = params[:worries]
+    @worries = params[:worries] || []
     @feeling = params[:feeling]
-    redirect_to new_selection_path
+
+    anthropic_service = AnthropicService.new
+    @episode = anthropic_service.generate_episode(@era, @worries, @feeling)
+
+    render :result
   end
 end
