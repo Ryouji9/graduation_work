@@ -1,6 +1,6 @@
 <h1>あなたの悩みを教えてください</h1>
 
-<%= form_with url: selections_path, method: :post do |f| %>
+  <%= form_with url: selections_path, method: :post, data: { turbo: false } do |f| %>
 
   <!-- STEP1: 時代（年齢）の選択 -->
   <div class="step">
